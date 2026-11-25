@@ -1,6 +1,6 @@
 ## Simple ROS2+Arduino Dynamixel control for the uni project 
 
-This project has been built for the Arduino Nano R4 WiFi (ESP32), Dynamixel Arduino shield and Dynamixel XL430-W250T servomotors. The ROS2 node is supposed to run on the onboard machine (e.g Nvidia Jetson) and talk to the motors via serial interface. The motors are used for actuating a 2DoF 3D-printed robot arm. Supports ROS2 Humble.
+This project has been built for the Arduino Uno R4 WiFi (ESP32), Dynamixel Arduino shield and Dynamixel XL430-W250T servomotors. The ROS2 node is supposed to run on the onboard machine (e.g Nvidia Jetson) and talk to the motors via serial interface. The motors are used for actuating a 2DoF 3D-printed robot arm. Supports ROS2 Humble.
 
 The code does not specify the amount of motors connected, but normally it is 3 (2 joints and 1 gripper). 
 
