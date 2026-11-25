@@ -4,10 +4,14 @@ This project has been built for the Arduino Uno R4 WiFi (ESP32), Dynamixel Ardui
 
 The code does not specify the amount of motors connected, but normally it is 3 (2 joints and 1 gripper). 
 
+## Quick start
 ### Build and run 
 ```bash
+cd /your_ros2_ws/src
+git clone https://github.com/shellyshampaine/easy_dynamixel_control.git
 colcon build 
 source install/setup.bash
+ros2 launch servo_bridge servo_bridge.launch.py port:=/dev/ttyACM0
 ```
 
 ### Sending a position command via ROS2 topic
