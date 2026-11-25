@@ -1,0 +1,17 @@
+servo_bridge:
+  ros__parameters:
+    port: /dev/ttyACM0
+
+    # Same order everywhere: arm joint 1, arm joint 2, gripper.
+    joint_names: [arm_joint1, arm_joint2, gripper]
+    servo_ids: [1, 2, 3]
+
+    # Raw encoder tick that maps to 0 rad (2048 = middle of 0..4095).
+    center_tick: 2048
+
+    # After a goal is sent, setpoint_reached stays false until the servo reports it is
+    # moving, or this long passes without motion (goal already reached, or blocked).
+    settle_timeout: 0.3   # s
+
+    # Reopen the serial port if no line arrives for this long (unplugged / board reset).
+    rx_timeout: 2.0       # s
